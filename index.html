@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Original Art | Relm of Shellz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Scrolling Header -->
+    <div class="scrolling-header">
+        <span>Welcome to the Relm of Shellz — Explore Our Unique Artworks and Prints!</span>
+    </div>
+
+    <!-- Navigation Menu -->
+    <header>
+        <div class="nav-container">
+            <h1>Relm of Shellz</h1>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="art-prints.html">Art Prints</a></li>
+                    <li><a href="420-products.html">420 Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle">☰ Menu</button>
+        </div>
+    </header>
+
+    <!-- Product Section -->
+    <section class="product-gallery">
+        <h2>Explore Our Original Art</h2>
+        <div class="row">
+            <div class="product-card">
+                <a href="product-original1.html">
+                    <img src="Abstract1.jpg" alt="Original Art 1">
+                </a>
+                <h3>Artwork Title 1</h3>
+                <p>$500</p>
+                <button onclick="addToCart('Artwork Title 1', 500)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <a href="product-original2.html">
+                    <img src="Abstract2.jpg" alt="Original Art 2">
+                </a>
+                <h3>Artwork Title 2</h3>
+                <p>$750</p>
+                <button onclick="addToCart('Artwork Title 2', 750)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <a href="product-original3.html">
+                    <img src="Abstract3.jpg" alt="Original Art 3">
+                </a>
+                <h3>Artwork Title 3</h3>
+                <p>$600</p>
+                <button onclick="addToCart('Artwork Title 3', 600)">Add to Cart</button>
+            </div>
+            <!-- Repeat for other artworks -->
+        </div>
+    </section>
+
+    <!-- Featured Prints Section -->
+    <section class="bottom-gallery">
+        <h2>Featured Prints</h2>
+        <div class="scrollable-gallery">
+            <img src="blu.jpg" alt="Gallery Image 1">
+            <img src="nipsey2.jpg" alt="Gallery Image 2">
+            <img src="Phante.jpg" alt="Gallery Image 3">
+            <img src="Roddy.jpg" alt="Gallery Image 4">
+            <img src="Zebra.jpg" alt="Gallery Image 5">
+            <img src="Leopardspounce.jpg" alt="Gallery Image 6">
+            <img src="baby.jpg" alt="Gallery Image 7">
+            <img src="beauty.jpg" alt="Gallery Image 8">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Powered by The Relm Of Shellz. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Toggle Menu
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+
+        // Add to Cart Function
+        function addToCart(itemName, itemPrice) {
+            alert(`${itemName} has been added to your cart for $${itemPrice}.`);
+            // Implement cart functionality here (e.g., update cart UI, local storage, etc.)
+        }
+    </script>
+</body>
+</html>
