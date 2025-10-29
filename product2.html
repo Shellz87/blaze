@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Original Art | Relm of Shellz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Scrolling Header -->
+    <div class="scrolling-header">
+        <span>Welcome to the Relm of Shellz</span>
+    </div>
+
+    <!-- Navigation Menu -->
+    <header>
+        <div class="nav-container">
+            <h1>Relm of Shellz</h1>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="art-prints.html">Art Prints</a></li>
+                    <li><a href="420-products.html">420 Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle">☰ Menu</button>
+        </div>
+    </header>
+
+    <!-- Original Art Section -->
+    <section class="product-gallery">
+        <div class="product-card">
+            <img src="blu.jpg" alt="Original Art 1">
+            <h3>Original Art Title 1</h3>
+            <p>$500</p>
+            <button class="buy-now-btn">Buy Now</button>
+        </div>
+        <!-- Add other product cards as needed -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        Powered by the Relm of Shellz © 2024
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

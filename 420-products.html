@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>420 Products | Relm of Shellz</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <header>
+        <div class="nav-container">
+            <h1>Relm of Shellz</h1>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="art-prints.html">Art Prints</a></li>
+                    <li><a href="420-products.html" class="active">420 Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle">☰</button>
+        </div>
+    </header>
+
+    <!-- Age Verification -->
+    <section class="age-gate">
+        <h2>420 Products</h2>
+        <p>Please confirm your age to proceed (21+).</p>
+        <button onclick="confirmAge()">I’m 21 or Older</button>
+    </section>
+
+    <!-- Hidden Content -->
+    <section id="restricted-content" style="display: none;">
+        <div class="product-gallery">
+            <div class="product-card">
+                <img src="bong1.jpg" alt="Bong - Elegant Glass">
+                <h3>Bong - Elegant Glass</h3>
+                <p>$75</p>
+                <button>Buy Now</button>
+            </div>
+
+            <div class="product-card">
+                <img src="hookah1.jpg" alt="Hookah - Deluxe">
+                <h3>Hookah - Deluxe</h3>
+                <p>$120</p>
+                <button>Buy Now</button>
+            </div>
+
+            <div class="product-card">
+                <img src="pipe1.jpg" alt="Mini Pipe - Compact">
+                <h3>Mini Pipe - Compact</h3>
+                <p>$25</p>
+                <button>Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart | Relm of Shellz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation Header -->
+  <header>
+    <div class="nav-container">
+      <h1>Relm of Shellz</h1>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="art-prints.html">Art Prints</a></li>
+          <li><a href="420-products.html">420 Products</a></li>
+          <li><a href="cart.html" class="active">Cart</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle">☰</button>
+    </div>
+  </header>
+
+  <!-- Cart Section -->
+  <section class="cart-section">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <h3>Total: $<span id="cart-total">0</span></h3>
+    <div id="paypal-button-container"></div>
+  </section>
+
+  <script src="scripts.js"></script>
+  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
+</body>
+</html>

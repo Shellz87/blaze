@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Prints | Relm of Shellz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Scrolling Header -->
+    <div class="scrolling-header">
+        <span>Welcome to the Relm of Shellz</span>
+    </div>
+
+    <!-- Navigation Menu -->
+    <header>
+        <div class="nav-container">
+            <h1>Relm of Shellz</h1>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="art-prints.html">Art Prints</a></li>
+                    <li><a href="420-products.html">420 Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle">☰ Menu</button>
+        </div>
+    </header>
+
+    <!-- Art Prints Section -->
+    <section class="art-prints-gallery">
+        <h2>Explore Our Art Prints</h2>
+        <div class="scrollable-gallery">
+            <img src="nipsey2.jpg" alt="Nipsey Blue" onclick="showModal('nipsey2.jpg')">
+            <img src="beauty.jpg" alt="Essence of Beauty" onclick="showModal('beauty.jpg')">
+            <img src="Image011.png" alt="Lion Art" onclick="showModal('Image011.png')">
+            <img src="MalcolmX.jpg" alt="Malcolm X" onclick="showModal('MalcolmX.jpg')">
+            <img src="PacisBack.jpg" alt="Tupac" onclick="showModal('PacisBack.jpg')">
+            <img src="Dusse_Bong1.jpg" alt="Dusse Bong" onclick="showModal('Dusse_Bong1.jpg')">
+            <img src="Roddy.jpg" alt="Roddy Ricch" onclick="showModal('Roddy.jpg')">
+            <img src="image009.png" alt="Pounce" onclick="showModal('image009.png')">
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="modal-close" onclick="closeModal()">×</span>
+        <img id="modal-image" src="" alt="Enlarged Art">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Powered by The Relm Of Shellz. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Modal functionality
+        function showModal(imageSrc) {
+            const modal = document.getElementById('modal');
+            const modalImage = document.getElementById('modal-image');
+            modalImage.src = imageSrc;
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
