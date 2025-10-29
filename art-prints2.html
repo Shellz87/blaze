@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Prints | Relm of Shellz</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .scrolling-header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 16px;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #444;
+            color: white;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-menu li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Art Prints Gallery */
+        .art-prints-gallery {
+            padding: 20px;
+            overflow-x: auto;
+        }
+
+        .scrollable-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .scrollable-gallery img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .scrollable-gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Modal for Enlarging Images */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border: 2px solid white;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Scrolling Header -->
+    <div class="scrolling-header">
+        <span>Welcome to the Relm of Shellz</span>
+    </div>
+
+    <!-- Navigation Menu -->
+    <header>
+        <div class="nav-container">
+            <h1>Relm of Shellz</h1>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="art-prints.html">Art Prints</a></li>
+                    <li><a href="420-products.html">420 Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle">☰</button>
+        </div>
+    </header>
+
+    <!-- Art Prints Section -->
+    <section class="art-prints-gallery">
+        <h2>Explore Our Art Prints</h2>
+        <div class="scrollable-gallery">
+            <img src="nipsey2.jpg" alt="Nipsey Blue" onclick="showModal('nipsey2.jpg')">
+            <img src="beauty.jpg" alt="Essence of Beauty" onclick="showModal('beauty.jpg')">
+            <img src="Image011.png" alt="Lion Art" onclick="showModal('Image011.png')">
+            <img src="MalcolmX.jpg" alt="Malcolm X" onclick="showModal('MalcolmX.jpg')">
+            <img src="PacisBack.jpg" alt="Tupac" onclick="showModal('PacisBack.jpg')">
+            <img src="Dusse_Bong1.jpg" alt="Dusse Bong" onclick="showModal('Dusse_Bong1.jpg')">
+            <img src="Roddy.jpg" alt="Roddy Ricch" onclick="showModal('Roddy.jpg')">
+            <img src="image009.png" alt="Pounce" onclick="showModal('image009.png')">
+            <img src="MuhammadAli.jpg" alt="Muhammad Ali" onclick="showModal('MuhammadAli.jpg')">
+            <img src="ElZebrae.jpg" alt="El Zebrae" onclick="showModal('ElZebrae.jpg')">
+            <img src="Hennessy1.jpg" alt="Hennessy" onclick="showModal('Hennessy1.jpg')">
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="modal-close" onclick="closeModal()">×</span>
+        <img id="modal-image" src="" alt="Enlarged Art">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Powered by The Relm Of Shellz. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Modal functionality
+        function showModal(imageSrc) {
+            const modal = document.getElementById('modal');
+            const modalImage = document.getElementById('modal-image');
+            modalImage.src = imageSrc;
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
