@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artwork Title 1 | Relm of Shellz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Scrolling Header -->
+    <div class="scrolling-header">
+        <span>Welcome to the Relm of Shellz — Explore Our Unique Artworks and Prints!</span>
+    </div>
+
+    <!-- Navigation Menu -->
+    <header>
+        <div class="nav-container">
+            <h1>Relm of Shellz</h1>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="art-prints.html">Art Prints</a></li>
+                    <li><a href="420-products.html">420 Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle">☰</button>
+        </div>
+    </header>
+
+    <!-- Product Details Section -->
+    <section class="product-details">
+        <div class="product-container">
+            <img src="original1.jpg" alt="Original Art 1" class="product-image">
+            <div class="product-info">
+                <h2>Artwork Title 1</h2>
+                <p><strong>Price:</strong> $500</p>
+                <p>
+                    <strong>Description:</strong> 
+                    This is a detailed description of Artwork Title 1. It's a vibrant and expressive piece that captures the essence of modern art with intricate textures and bold colors.
+                </p>
+                <p><strong>Artist:</strong> Shellz</p>
+                <button onclick="addToCart('Artwork Title 1', 500)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Powered by The Relm Of Shellz. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Add to Cart Function
+        function addToCart(itemName, itemPrice) {
+            alert(`${itemName} has been added to your cart for $${itemPrice}.`);
+            // Implement cart functionality here
+        }
+
+        // Toggle Menu
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
